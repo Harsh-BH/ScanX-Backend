@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deepfake Detection</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+<body>
+    <h1>Deepfake Detection</h1>
+    
+    <!-- File Upload Form -->
+    <form id="upload-form">
+        <label for="file-type">Choose File Type:</label>
+        <select id="file-type">
+            <option value="video">Video</option>
+            <option value="image">Image</option>
+        </select>
+        <br><br>
+        <input type="file" id="file-input" name="file" accept="video/*,image/*" required>
+        <br><br>
+        <input type="submit" value="Upload and Analyze">
+    </form>
+    
+    <div id="explanation">
+        <h3>How to Interpret the Results:</h3>
+        <p>The confidence percentage indicates the model's confidence that the analyzed faces are fake. A higher percentage means a higher likelihood of being a deepfake.</p>
+        <p>A confidence above 50% suggests the face is likely manipulated.</p>
+    </div>
+
+    <div id="result"></div>
+    <div style="width: 100%; height: 400px;">
+        <canvas id="confidenceChart"></canvas>
+    </div>
+
+    <!-- Text Input Form for Predicting Text -->
+    <h2>Text Prediction</h2>
+    <textarea id="text-input" rows="4" cols="50" placeholder="Enter your text here..."></textarea>
+    <br>
+    <button id="predict-text-button">Predict Text</button>
+    <div id="text-prediction-result"></div>
+</body>
+</html>
