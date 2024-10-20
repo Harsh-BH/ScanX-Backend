@@ -1,5 +1,6 @@
-/env
+# Ignore environment variable file
+.env
+
+# Ignore model files
 /model_text
-
-
 xception_deepfake_image_5o.h5
