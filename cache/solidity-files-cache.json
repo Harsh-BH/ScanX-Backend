@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/harsh-bhatt/Desktop/Hackathons/ScanX/scanx/backend/contracts/contract.sol": {
+      "lastModificationDate": 1727811864341,
+      "contentHash": "d02f54a13f2cd2d33eb337ed4fe56570",
+      "sourceName": "contracts/contract.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DeepfakeDetection"
+      ]
+    }
+  }
+}
