@@ -4,10 +4,11 @@ async function main() {
     const [deployer] = await ethers.getSigners();
     console.log("Deploying contracts with the account:", deployer.address);
   
-    const DeepfakeDetection = await ethers.getContractFactory("DeepfakeDetection");
-    const contract = await DeepfakeDetection.deploy();
-  
-    console.log("Contract address:", contract.address);
+    const VideoService = await ethers.getContractFactory("VideoService");
+    const contract = await VideoService.deploy();
+    await contract.deployed();
+
+    console.log("VideoService deployed to:", contract.address);
   }
   
   main()
